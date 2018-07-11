@@ -20,12 +20,13 @@ class App extends Component {
   }
 
   addToShoppingCart(product) {
+    // debugger
     this.setState({
-      shoppingCart: [...this.state.shoppingCart, product]
+      shoppingCart: [...this.state.shoppingCart, {product}]
     })
-    console.log(this.state.shoppingCart);
+    console.log("this is this.state.shoppingCart", this.state.shoppingCart);
   }
-
+  
   removeFromShoppingCart(product) {
     let newShoppingCart = this.state.shoppingCart;
     newShoppingCart.splice(newShoppingCart.indexOf(product), 1);
